@@ -2,4 +2,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
-message: Hello world, how are you today?
+testing:
+  match: 0eb10d28-32ff-11e6-8bd1-5775583ead59
+

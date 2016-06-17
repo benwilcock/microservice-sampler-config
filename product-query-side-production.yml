@@ -1,23 +1,19 @@
-message: Hello
-
-#debug: true
+message: Greetings!
 spring:
     application:
         exchange: product.events.fanout.exchange
-        queue: product.default.queue
-        databaseName: products
-        eventsCollectionName: events
-        snapshotCollectionName: snapshots
+        queue: event.stream
+        terminal: product.axon.terminal
     rabbitmq:
-        hostname: localhost
+        hostname: rabbitmq
         username: test
         password: password
     data:
-        mongodb:
-            uri: mongodb://localhost:27017/products
+        rest:
+            #base-path: api/v1
 logging:
     level:
-        root: INFO
+        root: WARN
         org.springframework: INFO
             #aop: DEBUG
             #dao: DEBUG
@@ -27,4 +23,4 @@ logging:
             #transaction: DEBUG
         org.axonframework: INFO
         com.soagrowers: INFO
-    file: ./build/logs/command-side-server.log
+    file: ./build/logs/query-side-server.log

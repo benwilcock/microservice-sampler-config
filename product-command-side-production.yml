@@ -9,12 +9,12 @@ spring:
         eventsCollectionName: events
         snapshotCollectionName: snapshots
     rabbitmq:
-        hostname: localhost
+        hostname: rabbitmq
         username: test
         password: password
     data:
         mongodb:
-            uri: mongodb://localhost:27017/products
+            uri: mongodb://mongodb:27017/products
 logging:
     level:
         root: INFO

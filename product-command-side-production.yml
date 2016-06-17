@@ -1,4 +1,4 @@
-message: Hello
+message: Greetings [from production]!
 
 #debug: true
 spring:

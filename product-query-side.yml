@@ -1,4 +1,5 @@
-message: Greetings!
+message: Greetings [from development]!
+
 spring:
     application:
         exchange: product.events.fanout.exchange

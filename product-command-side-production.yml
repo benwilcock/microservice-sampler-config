@@ -1,4 +1,4 @@
-message: Greetings [from production]!
+message: Greetings from the PRODUCT-COMMAND-SIDE microservice [using the PRODUCTION config].
 
 #debug: true
 spring:

@@ -1,4 +1,4 @@
-message: Greetings [from development]!
+message: Greetings from the PRODUCT-COMMAND-SIDE microservice [using the LOCALHOST config].
 
 #debug: true
 spring:

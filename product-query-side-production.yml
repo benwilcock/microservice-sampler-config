@@ -1,4 +1,4 @@
-message: Greetings [from production]!
+message: Greetings from the PRODUCT-QUERY-SIDE microservice [using the PRODUCTION config].
 
 spring:
     application:

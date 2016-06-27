@@ -1,5 +1,12 @@
 message: Greetings from the PRODUCT-QUERY-SIDE microservice [using the PRODUCTION config].
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+  instance:
+    preferIpAddress: true
+    
 spring:
     application:
         exchange: product.events.fanout.exchange
@@ -24,4 +31,4 @@ logging:
             #transaction: DEBUG
         org.axonframework: INFO
         com.soagrowers: INFO
-    file: ./build/logs/query-side-server.log
+    file: ./logs/query-side-server.log

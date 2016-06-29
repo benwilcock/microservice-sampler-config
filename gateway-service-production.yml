@@ -23,6 +23,5 @@ logging:
     level:
         root: INFO
         org.springframework: INFO
-        #com.netflix: DEBUG
         com.netflix.niws.client.http: DEBUG
         com.soagrowers: DEBUG

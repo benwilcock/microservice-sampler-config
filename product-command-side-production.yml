@@ -7,10 +7,16 @@ eureka:
       defaultZone: http://discovery:8761/eureka/
   instance:
     preferIpAddress: true
-    
+
+axon:
+    amqp:
+        exchange: product.events.fanout.exchange
+        transaction-mode: transactional
+    serializer:
+        general: jackson
 spring:
     application:
-        exchange: product.events.fanout.exchange
+#        exchange: product.events.fanout.exchange
         queue: product.default.queue
         databaseName: products
         eventsCollectionName: events

@@ -1,16 +1,20 @@
 message: Greetings from the PRODUCT-COMMAND-SIDE microservice [using the PRODUCTION config].
 
-#debug: true
 eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
   instance:
     preferIpAddress: true
-    
+
+axon:
+    amqp:
+        exchange: product.events.fanout.exchange
+        transaction-mode: transactional
+    serializer:
+        general: jackson
 spring:
     application:
-        exchange: product.events.fanout.exchange
         queue: product.default.queue
         databaseName: products
         eventsCollectionName: events
@@ -32,6 +36,6 @@ logging:
             #amqp: DEBUG
             #data: DEBUG
             #transaction: DEBUG
-        org.axonframework: INFO
-        com.soagrowers: INFO
+        org.axonframework: DEBUG
+        com.soagrowers: DEBUG
     file: ./logs/command-side-server.log

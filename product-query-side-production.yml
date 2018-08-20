@@ -23,7 +23,9 @@ spring:
         username: test
         password: password
     data:
-        rest:
+       mongodb:
+          uri: mongodb://mongodb:27017/sagas
+       rest:
             #base-path: api/v1
 logging:
     level:

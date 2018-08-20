@@ -32,11 +32,11 @@ logging:
         root: WARN
         org.springframework: INFO
             #aop: DEBUG
-            #dao: DEBUG
+            dao: DEBUG
             #orm: DEBUG
-            #amqp: DEBUG
+            amqp: DEBUG
             #data: DEBUG
             #transaction: DEBUG
-        org.axonframework: INFO
-        com.soagrowers: INFO
+        org.axonframework: DEBUG
+        com.soagrowers: DEBUG
     file: ./logs/query-side-server.log

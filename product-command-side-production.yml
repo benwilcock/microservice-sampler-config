@@ -32,9 +32,9 @@ logging:
         root: INFO
         org.springframework: INFO
             #aop: DEBUG
-            dao: DEBUG
+            #dao: DEBUG
             #orm: DEBUG
-            amqp: DEBUG
+            #amqp: DEBUG
             #data: DEBUG
             #transaction: DEBUG
         org.axonframework: DEBUG

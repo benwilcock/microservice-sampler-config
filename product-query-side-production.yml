@@ -13,6 +13,11 @@ axon:
         transaction-mode: transactional
     serializer:
         general: jackson
+    eventhandling:
+        processors:
+            ProductViewEventHandler:
+                mode: subscribing
+                source: eventBus
 spring:
     application:
 #        exchange: product.events.fanout.exchange

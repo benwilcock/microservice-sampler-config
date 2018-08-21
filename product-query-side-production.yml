@@ -29,7 +29,7 @@ spring:
             #base-path: api/v1
 logging:
     level:
-        root: WARN
+        root: INFO
         org.springframework: INFO
             #aop: DEBUG
             #dao: DEBUG

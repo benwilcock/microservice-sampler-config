@@ -13,11 +13,16 @@ axon:
         transaction-mode: transactional
     serializer:
         general: jackson
+    eventhandling:
+        processors:
+            name:
+                mode: subscribing
+                source: eventBus
 spring:
     application:
 #        exchange: product.events.fanout.exchange
-        databaseName: sagas
         queue: event.stream
+        databaseName: sagas
         terminal: product.axon.terminal
     rabbitmq:
         hostname: rabbitmq

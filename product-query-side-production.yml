@@ -15,7 +15,7 @@ axon:
         general: jackson
     eventhandling:
         processors:
-            name:
+            ProductViewEventHandler:
                 mode: subscribing
                 source: eventBus
 spring:

@@ -16,6 +16,7 @@ axon:
 spring:
     application:
 #        exchange: product.events.fanout.exchange
+        databaseName: sagas
         queue: event.stream
         terminal: product.axon.terminal
     rabbitmq:

@@ -14,6 +14,7 @@ axon:
     amqp:
         exchange: product.events.fanout.exchange
         transaction-mode: transactional
+        queue: event.stream
     serializer:
         general: jackson
     eventhandling:
@@ -25,8 +26,8 @@ spring:
     application:
 #        exchange: product.events.fanout.exchange
         databaseName: sagas
-        queue: event.stream
-        terminal: product.axon.terminal
+        # queue: event.stream
+        # terminal: product.axon.terminal
     rabbitmq:
         hostname: rabbitmq
         username: test

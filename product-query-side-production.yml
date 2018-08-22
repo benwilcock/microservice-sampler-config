@@ -1,5 +1,8 @@
 message: Greetings from the PRODUCT-QUERY-SIDE microservice [using the PRODUCTION config].
 
+management:
+    security:
+        enabled: false
 eureka:
   client:
     serviceUrl:
@@ -9,14 +12,14 @@ eureka:
     
 axon:
     amqp:
-        exchange: product.events.fanout.exchange
+        exchange: account.events.fanout.exchange
         transaction-mode: transactional
     serializer:
         general: jackson
     eventhandling:
         processors:
-            ProductViewEventHandler:
-                mode: subscribing
+            productQuery:
+                mode: tracking
                 source: eventBus
 spring:
     application:

@@ -1,5 +1,8 @@
 message: Greetings from the PRODUCT-COMMAND-SIDE microservice [using the PRODUCTION config].
 
+management:
+    security:
+        enabled: false
 eureka:
   client:
     serviceUrl:

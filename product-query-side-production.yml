@@ -12,7 +12,7 @@ eureka:
     
 axon:
     amqp:
-        exchange: account.events.fanout.exchange
+        exchange: product.events.fanout.exchange
         transaction-mode: transactional
     serializer:
         general: jackson
@@ -20,7 +20,7 @@ axon:
         processors:
             productQuery:
                 mode: tracking
-                source: eventBus
+                source: eventStream
 spring:
     application:
 #        exchange: product.events.fanout.exchange

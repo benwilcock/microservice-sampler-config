@@ -21,12 +21,12 @@ axon:
         processors:
             productQuery:
                 mode: tracking
-                source: eventStream
+                source: eventbus
 spring:
     application:
 #        exchange: product.events.fanout.exchange
         databaseName: sagas
-        # queue: event.stream
+        queue: event.stream
         # terminal: product.axon.terminal
     rabbitmq:
         hostname: rabbitmq

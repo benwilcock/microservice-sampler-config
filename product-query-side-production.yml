@@ -21,7 +21,7 @@ axon:
         processors:
             productQuery:
                 mode: tracking
-                source: eventbus
+                source: eventBus
 spring:
     application:
 #        exchange: product.events.fanout.exchange

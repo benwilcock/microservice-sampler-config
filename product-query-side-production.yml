@@ -20,7 +20,6 @@ axon:
     eventhandling:
         processors:
             productQuery:
-                mode: tracking
                 source: myQueueMessageSource
 spring:
     application:

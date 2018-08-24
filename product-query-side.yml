@@ -1,6 +1,5 @@
-message: Greetings from the PRODUCT-COMMAND-SIDE microservice [using the LOCALHOST config].
+message: Greetings from the PRODUCT-QUERY-SIDE microservice [using the LOCALHOST config].
 
-#debug: true
 eureka:
   client:
     serviceUrl:
@@ -11,17 +10,15 @@ eureka:
 spring:
     application:
         exchange: product.events.fanout.exchange
-        queue: product.default.queue
-        databaseName: products
-        eventsCollectionName: events
-        snapshotCollectionName: snapshots
+        queue: event.stream
+        terminal: product.axon.terminal
     rabbitmq:
         hostname: localhost
         username: test
         password: password
     data:
-        mongodb:
-            uri: mongodb://localhost:27017/products
+        rest:
+            #base-path: api/v1
 logging:
     level:
         root: INFO
@@ -33,5 +30,5 @@ logging:
             #data: DEBUG
             #transaction: DEBUG
         org.axonframework: INFO
-        com.soagrowers: INFO
-    file: ./build/logs/command-side-server.log
+        com.soagrowers: DEBUG
+    file: ./build/logs/query-side-server.log

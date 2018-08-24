@@ -1,8 +1,5 @@
 message: Greetings from the PRODUCT-QUERY-SIDE microservice [using the PRODUCTION config].
 
-management:
-    security:
-        enabled: false
 eureka:
   client:
     serviceUrl:
@@ -20,20 +17,18 @@ axon:
     eventhandling:
         processors:
             productQuery:
-                source: myQueueMessageSource
+                source: queryMessageQueue
 spring:
     application:
-#        exchange: product.events.fanout.exchange
-        databaseName: sagas
+        databaseName: query
         queue: event.stream
-        # terminal: product.axon.terminal
     rabbitmq:
         hostname: rabbitmq
         username: test
         password: password
     data:
        mongodb:
-          uri: mongodb://mongodb:27017/sagas
+          uri: mongodb://mongodb:27017/query
        rest:
             #base-path: api/v1
 logging:

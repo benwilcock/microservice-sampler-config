@@ -1,8 +1,5 @@
 message: Greetings from the PRODUCT-COMMAND-SIDE microservice [using the PRODUCTION config].
 
-management:
-    security:
-        enabled: false
 eureka:
   client:
     serviceUrl:
@@ -18,7 +15,6 @@ axon:
         general: jackson
 spring:
     application:
-#        exchange: product.events.fanout.exchange
         queue: product.default.queue
         databaseName: products
         eventsCollectionName: events

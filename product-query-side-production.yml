@@ -18,6 +18,7 @@ axon:
         processors:
             productQuery:
                 source: queryMessageQueue
+                mode: tracking
 spring:
     application:
         databaseName: query
@@ -34,7 +35,7 @@ spring:
 logging:
     level:
         root: INFO
-        org.springframework: DEBUG
+        org.springframework: INFO
             #aop: DEBUG
             #dao: DEBUG
             #orm: DEBUG

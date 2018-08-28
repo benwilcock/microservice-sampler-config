@@ -29,7 +29,7 @@ spring:
 logging:
     level:
         root: INFO
-        org.springframework: DEBUG
+        org.springframework: INFO
             #aop: DEBUG
             #dao: DEBUG
             #orm: DEBUG

@@ -21,8 +21,9 @@ axon:
     eventhandling:
         processors:
             productQuery:
+                mode: tracking
                 source: queryMessageQueue
-                
+
 spring:
     application:
         databaseName: query

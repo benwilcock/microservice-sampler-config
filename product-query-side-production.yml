@@ -18,10 +18,7 @@ axon:
         queue: event.stream
     serializer:
         general: jackson
-    eventhandling:
-        processors:
-            productQuery:
-                source: queryMessageQueue
+
 spring:
     application:
         databaseName: query

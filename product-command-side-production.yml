@@ -21,6 +21,7 @@ axon:
         processors:
             productQueryTracking:
                 mode: tracking
+                source: eventBus
 spring:
     application:
         queue: product.default.queue

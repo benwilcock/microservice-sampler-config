@@ -17,6 +17,10 @@ axon:
         transaction-mode: transactional
     serializer:
         general: jackson
+    eventhandling:
+        processors:
+            productQueryTracking:
+                mode: tracking
 spring:
     application:
         queue: product.default.queue

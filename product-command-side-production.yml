@@ -21,8 +21,6 @@ axon:
          - kafka:9092
         producer:
             transaction-id-prefix: testTransactionId
-        consumer:
-            group-id: testGroupId
 
     serializer:
         general: jackson

@@ -15,6 +15,15 @@ axon:
     amqp:
         exchange: product.events.fanout.exchange
         transaction-mode: transactional
+    kafka:
+        client-id: testClient
+        bootstrapServers:
+         - kafka:9092
+        producer:
+            transaction-id-prefix: testTransactionId
+        consumer:
+            group-id: testGroupId
+
     serializer:
         general: jackson
     eventhandling:

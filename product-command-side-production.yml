@@ -17,10 +17,14 @@ axon:
         transaction-mode: transactional
     kafka:
         client-id: testClient
-        bootstrapServers:
-         - kafka:9092
+        default-topic: test-topic
         producer:
             transaction-id-prefix: testTransactionId
+            bootstrapServers: kafka:9092
+            retries: 10
+            request:
+                timeout:
+                    ms: 2000
 
     serializer:
         general: jackson

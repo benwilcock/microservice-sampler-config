@@ -33,5 +33,5 @@ logging:
             #data: DEBUG
             #transaction: DEBUG
         org.axonframework: INFO
-        com.soagrowers: INFO
+        com.pankesh: INFO
     file: ./build/logs/command-side-server.log
